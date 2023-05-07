@@ -44,3 +44,42 @@ justify-content: center;
 align-items: center;
 color:black;
 }
+.social{
+    background-color: white;
+}
+.boxes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boxs{
+   display: flex;
+   align-items: center; 
+   flex-direction: row-reverse;
+}
+.box{
+    display: flex;
+    align-items: left; 
+}
+.boxs li, .boxs a{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    color:black;
+    text-decoration: none;
+    padding: 20%;
+}
+.boxs h4{
+    display: flex;
+}
+.box li, .box a{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    color:black;
+    text-decoration: none;
+    padding: 20%;
+}
+.boxs h4{
+    display: flex;
+}
