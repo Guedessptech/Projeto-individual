@@ -1,4 +1,4 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
 
 
@@ -8,12 +8,13 @@
 li {
     text-decoration: none;
     list-style-type: none
-
 }
+
 body {
     margin: 0px;
-    padding:0px;
+    padding: 0px;
 }
+
 .containerBody {
     background-image: url(imagens/fundo.png);
     overflow: hidden;
@@ -21,88 +22,106 @@ body {
 
 
 }
-.container{
+
+.container {
     display: flex;
     width: 80%;
-    margin:auto;
-    
+    margin: auto;
+}
 
-   
-}
-.header{
-    border-bottom: 3px solid #32b9cd;
+.header {
+
     background-color: black;
+
 }
-.header.container{
+
+.header.container {
     justify-content: space-between;
 }
-.titulo{
+
+.titulo {
     color: red;
     font-weight: 700;
     width: 30%;
 }
-.navbar{
+
+.navbar {
     display: flex;
     width: 100%;
     align-items: center;
     list-style: none;
     justify-content: end;
-    
+
 
 }
-.navbar li, .navbar a{
+
+.navbar li,
+.navbar a {
     color: white;
     text-decoration: none;
     font-weight: 700;
-    
 }
-.banner{
+
+.banner {
     background-size: cover;
 }
-.banner .container{
-height: 300px;
-justify-content: center;
-align-items: center;
-color:black;
+
+.banner .container {
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
-.social{
+
+.social {
     background-color: transparent;
 }
-.boxes{
+
+.boxes {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.boxsHamilton{
-   display: flex;
-   align-items: center; 
-   flex-direction: row-reverse;
+
+.boxsHamilton {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 50%;
+    height:80% ;
 
 }
-.boxsSenna{
+
+.boxsSenna {
     display: flex;
-    align-items: left; 
+    align-items: left;
 }
-.boxs li, .boxs a{
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    color:black;
-    text-decoration: none;
-    padding: 20%;
-}
-.boxs h4{
-    display: flex;
-}
-.box li, .box a{
+
+.boxs li,
+.boxs a {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    color:black;
+    color: black;
     text-decoration: none;
     padding: 20%;
 }
-.boxs h4{
+
+.boxs h4 {
+    display: flex;
+}
+
+.box li,
+.box a {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    color: black;
+    text-decoration: none;
+    padding: 20%;
+}
+
+.boxs h4 {
     display: flex;
 }
 
@@ -116,3 +135,7 @@ color:black;
     height: 50%;
 }
 
+.boxsHamilton p {
+    display: flex;
+    flex-direction: column;
+}
