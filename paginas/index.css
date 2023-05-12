@@ -89,12 +89,13 @@ body {
     flex-direction: row-reverse;
     width: 50%;
     height:80% ;
+    justify-content: left;
 
 }
 
 .boxsSenna {
     display: flex;
-    align-items: left;
+    flex-direction: row;
 }
 
 .boxs li,
@@ -107,8 +108,10 @@ body {
     padding: 20%;
 }
 
-.boxs h4 {
+.boxsHamilton h4 {
+    color: aqua;
     display: flex;
+    height: 130%;
 }
 
 .box li,
@@ -121,21 +124,38 @@ body {
     padding: 20%;
 }
 
-.boxs h4 {
+.boxsSenna h4 {
+    color: red;
     display: flex;
+    height: 50%;
 }
 
 .boxsHamilton img {
-    width: 50%;
-    height: 50%;
+    width: 78%;
+    height: 70%;
+    margin: 50%;
+    margin-top: 20%;
+    border-radius: 9%;
 }
 
 .boxsSenna img {
-    width: 50%;
-    height: 50%;
+    width: 83%;
+    height: 85%;
+    border-radius: 9%;
 }
 
 .boxsHamilton p {
+    color: white;
     display: flex;
     flex-direction: column;
+}
+.boxsSenna p {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.boxsHamilton a{
+    color: blue;
+    
+    
 }
