@@ -55,9 +55,19 @@ body {
     color: white;
     font-weight: 700;
     width: 30%;
-    
+    font-size: 30px;
+    margin-top: 10px;
+    text-decoration: none;
 }
 
+.titulo :hover{
+    color:aqua;
+    font-weight: 700;
+    width: 30%;
+    font-size: 30px;
+    margin-top: 10px;
+    text-decoration: none;
+}
 .navbar {
     display: flex;
     width: 100%;
@@ -73,6 +83,13 @@ body {
     font-weight: 700;
 }
 
+
+.navbar  :hover{
+    color: aqua;
+    transition: 1s;
+    text-decoration: none;
+    font-weight: 700;
+}
 .banner {
     background-size: cover;
 }
@@ -82,6 +99,7 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
+    line-height: 1,5px;
 }
 
 .social {
@@ -195,6 +213,52 @@ body {
     width: 40%;
 }
 .cadastro button{
+    background-color: black;
+    border-radius: 3px;
+    color: white;
+    width: 60px;
+    border: 0;
+    padding: 3px 0;
+    align-self:center;
+    cursor: pointer;
+}
+
+
+/*/Página de Login/*/
+
+
+.login{
+    background-image: url(imagens/transferir.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.473);
+     background-blend-mode: multiply;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
+     width: 25%;
+     margin: auto;
+     margin-top: 7%;
+}
+.login h4{
+    margin: 7px;
+}
+#bem-vindo{
+    font-size: 25px;
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+.login input{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 3px 2px;
+    width: 40%;
+}
+.login button{
     background-color: black;
     border-radius: 3px;
     color: white;
