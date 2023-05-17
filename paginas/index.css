@@ -273,7 +273,7 @@ body {
 /*/Formulario/*/
 
 .Formulario{
-    background-color: rgba(255, 255, 255, 0.61);
+    background-color: rgba(199, 191, 191, 0.603);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -306,3 +306,169 @@ body {
     align-self:center;
     cursor: pointer;
 }
+
+/*/Página de F1/*/
+li {
+    text-decoration: none;
+    list-style-type: none
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#backgroundImg {
+    background-image: url(imagens/fundo.png);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerBodyHome {
+    background-image: url(imagens/fundo.png);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.63);
+    background-blend-mode: multiply;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+.headerF1 {
+     background-color: rgba(0, 0, 0, 0.473);
+     background-blend-mode: multiply;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
+}
+
+.header.container {
+    justify-content: space-between;
+}
+
+.titulo {
+    color: white;
+    font-weight: 700;
+    width: 30%;
+    font-size: 30px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.titulo :hover{
+    color:aqua;
+    font-weight: 700;
+    width: 30%;
+    font-size: 30px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    justify-content: end;
+}
+
+.navbar li,
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+.navbar  :hover{
+    color: aqua;
+    transition: 1s;
+    text-decoration: none;
+    font-weight: 700;
+}
+.banner {
+    background-size: cover;
+}
+
+.banner .container {
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    line-height: 1,5px;
+}
+
+.social {
+    background-color: transparent;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerHamilton{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 6%;
+}
+
+.textoHamilton {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    justify-content: left;
+}
+
+.textoHamilton h4 {
+    color: aqua;
+    font-size: 200%;
+    font-weight: 800px;
+}
+
+
+.textoHamilton p {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.containerHamilton img{
+    width: 660px;
+    height: 350px;
+    border-radius: 9px;
+}
+.containerSenna{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.textoSenna{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    justify-content: right;
+}
+.textoSenna h4 {
+    color: red;
+    font-size: 200%;
+    font-weight: 800px;
+}
+.textoSenna p {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+.containerSenna img {
+    width: 660px;
+    height: 350px;
+    border-radius: 9px;
+}
+
