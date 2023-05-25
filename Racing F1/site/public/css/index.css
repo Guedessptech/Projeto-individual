@@ -354,9 +354,10 @@ body {
 .container_Img {
     display: flex;
     align-items: flex-end;
+    justify-content: left;
 }
 .container_Img img {
-    width: 50%;
+    width: 38%;
     margin-top: 5%;
 
 }
@@ -393,16 +394,6 @@ body {
     font-weight: 700;
 }
 
-
-
-
-.navbar :hover {
-    color: aqua;
-    transition: 1s;
-    text-decoration: none;
-    font-weight: 700;
-}
-
 .bannerF1 {
     background-size: cover;
 
@@ -418,6 +409,22 @@ body {
 
 .socialF1 {
     background-color: transparent;
+}
+
+.textoF1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    
+    
+}
+.textoF1 p {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+ line-height: s 1, 5px;
 }
 
 
