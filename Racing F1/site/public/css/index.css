@@ -105,7 +105,7 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    line-height: 1, 5px;
+    line-height: 20px;
 }
 
 .social {
@@ -347,19 +347,22 @@ body {
 }
 .containerF1 {
     display: flex;
-    width: 80%;
-    margin: auto;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+
 }
 
 .container_Img {
-    display: flex;
-    align-items: flex-end;
-    justify-content: left;
+    width: 300%;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 .container_Img img {
-    width: 38%;
-    margin-top: 5%;
-
+    width: 100%;
+    
+    
 }
 .headerF1 {
     background-color: rgba(0, 0, 0, 0.473);
@@ -367,7 +370,10 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
 }
 
-.headerF1.containerF1 {
+.container2F1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -385,7 +391,7 @@ body {
     width: 100%;
     align-items: center;
     list-style: none;
-    justify-content: end;
+    justify-content: center;
 }
 .navbarF1 li,
 .navbarF1 a {
@@ -399,32 +405,23 @@ body {
 
 }
 
-.bannerF1 .containerF1 {
-    height: 300px;
+.bannerF1  {
+    height: 400px;
     justify-content: center;
     align-items: center;
     color: white;
-    line-height: 1, 5px;
+    
 }
 
 .socialF1 {
     background-color: transparent;
 }
 
-.textoF1 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    
-    
-}
-.textoF1 p {
+.container2F1 p {
     color: white;
     display: flex;
+    line-height: 20px;
     flex-direction: column;
-    justify-content: right;
- line-height: s 1, 5px;
 }
 
 
