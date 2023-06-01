@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Racing F1 | Página Innicial</title>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <div class="containerBodyHomegrafico">
+    <div class="headergrafico">
+      <div class="containerF1">
+        <a href="index.html" class="titulo"> Racing F1</a>
+        <ul class="navbargrafico">
+          <ul>
+            <li><a href="f1.html">Conheça sobre a Formual 1</a></li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bannergrafico">
+      <div class="graficoPiloto">
+        <div>
+          <canvas id="myChart"></canvas>
+        </div>
+        
+        
+        
+      </div>
+        <div class="graficoEquipe">
+          <div>
+            <canvas id="myChart2"></canvas>
+          </div>
+        </div>
+      
+    </div>
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        
+        <script>
+          const ctx = document.getElementById('myChart');
+        
+          new Chart(ctx, {
+            type: 'pie',
+            data: {
+              labels: ['Ferrari', 'Red Bull', 'Mercedes'],
+              datasets: [{
+                label: 'Pilotos',
+                data: [12, 19, 3],
+                backgroundColor: "black",
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                // y: {
+                //   beginAtZero: true
+                // }
+              }
+            }
+          });
+
+          const ctx2 = document.getElementById('myChart2');
+        
+        new Chart(ctx2, {
+          type: 'pie',
+          data: {
+            labels: ['Red', 'Blue', 'Orange'],
+            datasets: [{
+              label: 'Equipes',
+              data: [12, 19, 3],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              // y: {
+              //   beginAtZero: true
+              // }
+            }
+          }
+        });
+        </script>
