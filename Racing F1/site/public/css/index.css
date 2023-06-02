@@ -484,15 +484,11 @@ body {
 .graficoPiloto{
 width: 30%;
 height: 70vh;
-background-color: blue;
-
-
 }
 
 .graficoEquipe{
     width: 30%;
-    height: 70vh;
-    background-color: blue; 
+    height: 70vh; 
 }
 
 .bannergrafico{

@@ -50,20 +50,15 @@
           new Chart(ctx, {
             type: 'pie',
             data: {
+
               labels: ['Ferrari', 'Red Bull', 'Mercedes'],
               datasets: [{
-                label: 'Pilotos',
+                backgroundColor:['#b22222',  '#00008b','#00ffff'],
                 data: [12, 19, 3],
-                backgroundColor: "black",
                 borderWidth: 1
               }]
             },
             options: {
-              scales: {
-                // y: {
-                //   beginAtZero: true
-                // }
-              }
             }
           });
 
@@ -72,9 +67,10 @@
         new Chart(ctx2, {
           type: 'pie',
           data: {
-            labels: ['Red', 'Blue', 'Orange'],
+
+            labels: ['Ferrari', 'Red Bull', 'Mercedes'],
             datasets: [{
-              label: 'Equipes',
+              backgroundColor:['#b22222',  '#00008b','#00ffff'],
               data: [12, 19, 3],
               borderWidth: 1
             }]
