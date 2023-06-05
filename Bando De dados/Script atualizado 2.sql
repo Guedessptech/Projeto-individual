@@ -12,25 +12,13 @@ insert into tbformulario values
 ( null , ' Verstappen ' , ' Red Bull ' ),
 ( null, ' Leclerc ' , ' Ferrari ' );
 
-create table tbusuario(
-idusuario int primary key auto_increment,
-email varchar(45),
-senha varchar(45),
-fkformulario int,
-constraint fkformulario foreign key (fkformulario)
-references tbformulario (idformulario));
-
-insert into tbusuario value
-(null,'guedesbiel10@gmail.com','xgames12',1),
-(null,'kat10@gmail.com','xgames13',2),
-(null,'carlos10@gmail.com','xgames14',3);
-
-
 create table tbcadastro(
 idCadastro int primary key auto_increment,
 nome varchar(45),
 email varchar(45),
-senha char(9)
+senha char(9),
+constraint fkformulario foreign key (fkformulario)
+references tbformulario (idformulario)
 );
 select * from tbformulario;
 
