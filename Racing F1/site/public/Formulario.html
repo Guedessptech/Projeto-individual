@@ -33,15 +33,58 @@
           <option value="Charles Leclerc">Charles Leclerc</option>
         </select>
         <h4>Informe sua equipe favorita</h4>
-        <select name="equipe" id="F1" class="select2" style="background-color: black;" >
+        <select name="equipe" id="equipe" class="select2" style="background-color: black;" >
           <option value="Mercedes">Mercedes</option>
-          <option value="Red bull racing">Red Bull Racing</option>
+          <option value="Red bull">Red Bull</option>
           <option value="Ferrari">Ferrari</option>
         </select>
-        <button onclick="enviar()" >Enviar</button>
+        <button onclick="respostaUsuario()">Enviar</button>
       </div>
     </div>
   </div>
 </body>
 
 </html>
+
+<script>
+function respostaUsuario() {
+
+      //Recupere o valor da nova input pelo nome do id
+      // Agora vá para o método fetch logo abaixo
+      var nomePiloto = piloto.value;
+      var nomeEquipe = equipe.value;
+
+
+      // Enviando o valor da nova input
+      fetch("/usuarios/respostaUsuario", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+              // crie um atributo que recebe o valor recuperado aqui
+              // Agora vá para o arquivo routes/usuario.js
+              nomeRespostapiloto: nomePiloto,
+              nomeRespostaequipe: nomeEquipe
+          })
+      }).then(function (resposta) {
+
+          console.log("resposta: ", resposta);
+
+          if (resposta.ok) {
+
+
+              setTimeout(() => {
+                  window.location = "grafico.html";
+              }, "2000")
+
+          } else {
+              throw ("Houve um erro ao tentar realizar o cadastro!");
+          }
+      }).catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+      });
+
+      return false;
+  }
+</script>

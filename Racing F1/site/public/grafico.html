@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Racing F1 | Página Innicial</title>
   <link rel="stylesheet" href="css/index.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -25,6 +26,7 @@
     <div class="bannergrafico">
       <div class="graficoPiloto">
         <div>
+        <h1>Pilotos</h1>
           <canvas id="myChart"></canvas>
         </div>
         
@@ -33,6 +35,7 @@
       </div>
         <div class="graficoEquipe">
           <div>
+          <h1>Equipes</h1>
             <canvas id="myChart2"></canvas>
           </div>
         </div>
@@ -42,45 +45,102 @@
 
 </html>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         
         <script>
-          const ctx = document.getElementById('myChart');
-        
-          new Chart(ctx, {
-            type: 'pie',
-            data: {
 
-              labels: ['Ferrari', 'Red Bull', 'Mercedes'],
-              datasets: [{
-                backgroundColor:['#b22222',  '#00008b','#00ffff'],
-                data: [12, 19, 3],
-                borderWidth: 1
-              }]
-            },
-            options: {
+        const ctx = document.getElementById('myChart');
+        const ctx2 = document.getElementById('myChart2');
+          var listaEquipe = []
+          var listaPiloto = []
+          fetch(`medidas/buscarMedidasPiloto`,{
+            method: "GET", 
+            headers: {
+                  "Content-Type": "application/json"
             }
+
+          }).then(function(resposta){
+            if(resposta.ok){
+              resposta.json().then((json)=>{
+                console.log(json) 
+                json.forEach(element => {
+                       listaPiloto.push(element.qtdPiloto)
+                    });
+              }).then(()=>{
+                graficoPiloto()
+              })
+            
+            }else if(resposta.status == 404){
+              alert("Não funcionou.")
+            }
+          }).catch(function(resposta){
+            console.log(erro)
+          })
+
+          function graficoPiloto(){
+             var data = {
+            labels: ['Lewis Hamilton', 'Charles Leclerc', 'Max Verstappen'],
+            datasets: [{
+            data: [listaPiloto[0],listaPiloto[1],listaPiloto[2]],
+            backgroundColor: ['#00ffff', '#b22222','#00008b'],
+        }]
+            };
+  
+            var options = {
+            responsive: true,
+            };
+  
+    new Chart(ctx, {
+    type: 'pie',
+    data: data,
+    options: options
+  });
+        
+  }
+           fetch(`medidas/buscarMedidasEquipe`,{
+            method: "GET", 
+            headers: {
+                  "Content-Type": "application/json"
+            }
+
+          }).then(function(resposta){
+            if(resposta.ok){
+              resposta.json().then((json)=>{
+                console.log(json) 
+                json.forEach(element => {
+                       listaEquipe.push(element.qtdEquipe)
+                    });
+              }).then(()=>{
+                graficoEquipe()
+              })
+            
+            }else if(resposta.status == 404){
+              alert("Não funcionou.")
+            }
+          }).catch(function(resposta){
+            console.log(erro)
           });
 
-          const ctx2 = document.getElementById('myChart2');
-        
-        new Chart(ctx2, {
-          type: 'pie',
-          data: {
-
+          function graficoEquipe(){
+             var data = {
             labels: ['Ferrari', 'Red Bull', 'Mercedes'],
             datasets: [{
-              backgroundColor:['#b22222',  '#00008b','#00ffff'],
-              data: [12, 19, 3],
-              borderWidth: 1
-            }]
-          },
-          options: {
-            scales: {
-              // y: {
-              //   beginAtZero: true
-              // }
-            }
+            data: [listaEquipe[0],listaEquipe[1],listaEquipe[2]],
+            backgroundColor: ['#b22222', '#00008b','#00ffff'],
+        }]
+            };
+  
+            var options = {
+            responsive: true,
+            };
+  
+    new Chart(ctx2, {
+    type: 'pie',
+    data: data,
+    options: options
+  });
           }
-        });
+
+          
+        
+    
         </script>
